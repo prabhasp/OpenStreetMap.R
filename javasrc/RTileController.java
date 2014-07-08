@@ -72,7 +72,7 @@ public class RTileController extends TileController{
 		} else if(type.startsWith("mapbox")) {
 			String id = "";
 			if (type.startsWith("mapbox-")) {
-				id = type.split("-")[1];
+				id = type.substring(7);
 			} else {
 				id = "examples.map-i86nkdio";
 			}
