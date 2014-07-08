@@ -122,15 +122,16 @@ plot.osmtile <- function(x, y=NULL, add=TRUE, raster=TRUE, ...){
 #' }
 openmap <- function(upperLeft,lowerRight,zoom=NULL,type=c("osm","osm-bw","maptoolkit-topo",
 				"waze","mapquest","mapquest-aerial","bing","stamen-toner","stamen-terrain"
-						,"stamen-watercolor","osm-german","osm-wanderreitkarte","mapbox",
+						,"stamen-watercolor","osm-german","osm-wanderreitkarte","mapbox-<id>",
 						"esri","esri-topo","nps","apple-iphoto","skobbler","cloudmade-<id>",
 						"hillshade","opencyclemap","osm-transport","osm-public-transport",
 						"osm-bbike","osm-bbike-german"),
 		minNumTiles=9L, mergeTiles=TRUE){
 	type <- type[1]
-	if(substr(type,1,9) != "cloudmade" && !(type %in% c("osm","osm-bw","maptoolkit-topo",
+	if(substr(type,1,9) != "cloudmade" && substr(type,1,6) != "mapbox" && 
+           !(type %in% c("osm","osm-bw","maptoolkit-topo",
 				"waze","mapquest","mapquest-aerial","bing","stamen-toner","stamen-terrain"
-						,"stamen-watercolor","osm-german","osm-wanderreitkarte","mapbox",
+						,"stamen-watercolor","osm-german","osm-wanderreitkarte",
 						"esri","esri-topo","nps","apple-iphoto","skobbler",
 						"hillshade","opencyclemap","osm-transport","osm-public-transport",
 						"osm-bbike","osm-bbike-german"))){

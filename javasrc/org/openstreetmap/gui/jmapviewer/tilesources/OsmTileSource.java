@@ -249,8 +249,8 @@ public class OsmTileSource {
     }  
     
     public static class MapBox extends AbstractOsmTileSource {
-        public MapBox() {
-            super("mapbox", "http://a.tiles.mapbox.com/v3/examples.map-vyofok3q");
+        public MapBox(String id) {
+            super("mapbox", "http://a.tiles.mapbox.com/v3/" + id);
         }
 
 		public TileUpdate getTileUpdate() {
@@ -496,6 +496,7 @@ public class OsmTileSource {
 	        return "http://toolserver.org/~cmarqu/";
 	    }
     }
+    
     
     public static class CloudMade extends AbstractOsmTileSource {
     	public String mapId;

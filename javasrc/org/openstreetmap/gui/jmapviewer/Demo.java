@@ -75,7 +75,7 @@ public class Demo extends JFrame {
         		new StamenTileSource.WaterColor(),
         		new OsmTileSource.MapnikGerman(),
         		new OsmTileSource.Wanderreitkarte(),
-        		new OsmTileSource.MapBox(),
+        		new OsmTileSource.MapBox("examples.map-i86nkdio"),
         		new OsmTileSource.Esri(),
         		new OsmTileSource.EsriTopo(),
         		new OsmTileSource.Nps(),

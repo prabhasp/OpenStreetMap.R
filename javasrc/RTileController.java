@@ -42,7 +42,7 @@ public class RTileController extends TileController{
 	        		new StamenTileSource.WaterColor(),
 	        		new OsmTileSource.MapnikGerman(),
 	        		new OsmTileSource.Wanderreitkarte(),
-	        		new OsmTileSource.MapBox(),
+	        		new OsmTileSource.MapBox("examples.map-i86nkdio"),
 	        		new OsmTileSource.Esri(),
 	        		new OsmTileSource.EsriTopo(),
 	        		new OsmTileSource.Nps(),
@@ -69,6 +69,14 @@ public class RTileController extends TileController{
 		if(type.startsWith("cloudmade")){
 			String id = type.split("-")[1];
 			src = new OsmTileSource.CloudMade(id);
+		} else if(type.startsWith("mapbox")) {
+			String id = "";
+			if (type.startsWith("mapbox-")) {
+				id = type.split("-")[1];
+			} else {
+				id = "examples.map-i86nkdio";
+			}
+			src = new OsmTileSource.MapBox(id);
 		}else{
 			for(int i=0;i<sources.length;i++){
 				if(sources[i].getName().equals(type)){
