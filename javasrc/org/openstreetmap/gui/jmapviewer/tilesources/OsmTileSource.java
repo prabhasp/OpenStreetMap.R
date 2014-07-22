@@ -250,7 +250,7 @@ public class OsmTileSource {
     
     public static class MapBox extends AbstractOsmTileSource {
         public MapBox() {
-            super("mapbox", "http://a.tiles.mapbox.com/v3/examples.map-vyofok3q");
+            super("mapbox", "http://a.tiles.mapbox.com/v3/examples.map-i86nkdio");
         }
 
 		public TileUpdate getTileUpdate() {

@@ -8,7 +8,7 @@ Description: Accesses high resolution raster maps. Dozens of road,
         including CloudMade, Mapnik, Bing, stamen, and MapQuest. Maps
         can be plotted using either base graphics, or ggplot2.
 SystemRequirements: Java (>= 1.5), JRI
-Version: 0.3.1
+Version: 0.3.2
 URL: http://www.fellstat.com http://blog.fellstat.com/?cat=15
         http://research.cens.ucla.edu/
 Date: 2013-04-11
